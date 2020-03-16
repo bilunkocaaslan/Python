@@ -1,0 +1,11 @@
+xlist = list()
+olist= list()
+girdi = input('')
+while girdi != '':
+   if girdi.startswith('x'):
+     xlist.append(girdi)
+   else:
+     olist.append(girdi)
+   girdi = input('')
+for g in sorted(xlist)+sorted(olist):
+    print(g)

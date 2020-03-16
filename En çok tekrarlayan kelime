@@ -1,0 +1,18 @@
+import sys # sistem modülünü yükler
+girdi = sys.stdin.read() # EOF karakterine kadar olan tüm girdileri okur
+girdi = girdi.replace('.','').replace(',','').replace('\'','').replace('-',' ')
+girdi = girdi.lower()
+g1 = girdi.split(' ')
+d = {}
+for kelime in g1:
+    
+    if kelime not in d:
+        d[kelime]=1
+    else: 
+        d[kelime] += 1
+i = 0
+for k in sorted(d, key=d.get ,reverse=True):
+    print(k, d[k])
+    i += 1
+    if i == 5:
+       break

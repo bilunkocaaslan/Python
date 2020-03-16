@@ -1,0 +1,12 @@
+//Kullanıcı boş metin girene kadar kullanıcıdan tam sayı alacak olan ve 1000 sayısını alınan sayılara bölerek toplayan kod.
+
+
+toplam=0
+girdi=input('')
+while girdi != '':
+    try:
+      toplam += int(1000/int(float(girdi)))
+    except:
+       pass
+    girdi=input('')
+print(toplam)
